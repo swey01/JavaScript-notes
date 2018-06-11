@@ -45,66 +45,63 @@
 
 * ###### IE 6的CSS Hack
     css名称前面加上下划线`_`,只有IE 6可以识别
-    css-hack {
+    ```css-hack {
         background-color: red; /* 其他浏览器上显示为红色 */
         _background-color: blue; /* 只有IE 6浏览器上显示为蓝色 */
-    }
+    }```
+
 > 补充：IE 6支持!important，但有个bug，一个样式内重复设了属性，会忽略'!important'
 
 * ###### IE 7的CSS Hack
     IE6、IE7都能够识别加了`+`、`*`或`#`前缀的css属性名称,IE 7不支持`_`前缀
+
     ```.css-hack {
         color: red; /* 其他浏览器上显示为红色 */
         +color: blue; /* 只有 IE 6、IE 7 浏览器上显示为蓝色 */
         _color: red; /* 让 IE 6 复原为之前设置的颜色 */
     }```
+
     IE 7也支持在选择器前添加*+html,只有IE 7可以识别
-    ```
-    .css-hack {
+
+    ```.css-hack {
         color: red; /* 其他浏览器显示红色 */
-    }
-    ```
+    }```
+
     `+html`
-    ```
-    .css-hack {
+
+    ```.css-hack {
         color: blue; /* 只有IE 7显示蓝色  */
-    }
-    ```
+    }```
 
 * ###### IE 8的CSS Hack
     只有IE8支持嵌套如下`@media`类型查询语句：@media \0screen。
 
-    ```
-    .css-hack {
+    ```.css-hack {
         color: red; /* 其他浏览器显示红色 */
     }
 
     @media \0screen {
         .css-hack { color: blue; } /* 只有IE 8显示蓝色 */
-    }
-    ```
+    }```
 
 * ###### IE 9的CSS Hack
-    `\0`;      /* ie 8/9*/
-    `\9\0`;    /* ie 9*/
+    * `\0`;      /* ie 8/9*/
+    * `\9\0`;    /* ie 9*/
 
 * ###### IE 10/11的CSS Hack
 
-    ````
-    /*ie11 css hack*/ 
+    ````/*ie11 css hack*/ 
     @media all and (-ms-high-contrast:none) { 
         *::-ms-backdrop, .class名字 { 里面的样式:样式值;} 
     }       /*ie11注意里面的标点符号*/ 
     /*ie10 css hack*/ 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
         .class名字 { 里面的样式:样式值;} 
-    }
-    ````
+    }````
 
 #### FireFox的CSS Hack
     FireFox支持嵌套其专用的css语句：@-moz-document url-prefix()。
-    ```
-    .css-hack {
+    ````.css-hack {
         color: red; /* 其他浏览器显示红色 */
     }
 
@@ -112,13 +109,12 @@
         .css-hack {
             color: blue; /* 只有FireFox显示为蓝色 */
         }
-    }
-    ```
+    }````
 
 #### Chrome、Safari等Webkit内核的浏览器的CSS Hack
     hrome、Safari等采用webkit内核的浏览器支持媒体类型查询语句：@media screen and (-webkit-min-device-pixel-ratio:0)。
 
-    ```
+    ````
     .css-hack {
         color: red; /* 其他浏览器显示红色 */
     }
@@ -128,4 +124,4 @@
             color: blue; /* Webkit内核浏览器显示蓝色 */
         }
     }
-    ```
+    ````
