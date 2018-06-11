@@ -53,20 +53,18 @@
 
 * ###### IE 7的CSS Hack
     IE6、IE7都能够识别加了`+`、`*`或`#`前缀的css属性名称,IE 7不支持`_`前缀
-    ``
-    .css-hack {
+    ``.css-hack {
         color: red; /* 其他浏览器上显示为红色 */
         +color: blue; /* 只有 IE 6、IE 7 浏览器上显示为蓝色 */
         _color: red; /* 让 IE 6 复原为之前设置的颜色 */
-    }
-    ``
+    }``
     IE 7也支持在选择器前添加*+html,只有IE 7可以识别
     ``
     .css-hack {
         color: red; /* 其他浏览器显示红色 */
     }
     ``
- `+html`
+    `+html`
     ``
     .css-hack {
         color: blue; /* 只有IE 7显示蓝色  */
@@ -92,7 +90,7 @@
 
 * ###### IE 10/11的CSS Hack
 
-    ``
+    ```
     /*ie11 css hack*/ 
     @media all and (-ms-high-contrast:none) { 
         *::-ms-backdrop, .class名字 { 里面的样式:样式值;} 
@@ -101,7 +99,7 @@
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
         .class名字 { 里面的样式:样式值;} 
     }
-    ``
+    ```
 
 #### FireFox的CSS Hack
     FireFox支持嵌套其专用的css语句：@-moz-document url-prefix()。
