@@ -43,7 +43,7 @@
 
 #### IE浏览器的CSS Hack
 
-* IE 6的CSS Hack
+* ###### IE 6的CSS Hack
     css名称前面加上下划线`_`,只有IE 6可以识别
     css-hack {
     background-color: red; /* 其他浏览器上显示为红色 */
@@ -51,7 +51,7 @@
 }
 补充：IE 6支持!important，但有个bug，一个样式内重复设了属性，会忽略'!important'
 
-* IE 7的CSS Hack
+* ###### IE 7的CSS Hack
     IE6、IE7都能够识别加了`+`、`*`或`#`前缀的css属性名称,IE 7不支持`_`前缀
     .css-hack {
         color: red; /* 其他浏览器上显示为红色 */
@@ -62,12 +62,12 @@
     .css-hack {
         color: red; /* 其他浏览器显示红色 */
     }
-* +html 
+* ###### +html 
     .css-hack {
         color: blue; /* 只有IE 7显示蓝色  */
     }
 
-* IE 8的CSS Hack
+* ###### IE 8的CSS Hack
     只有IE8支持嵌套如下`@media`类型查询语句：@media \0screen。
 
     .css-hack {
@@ -78,11 +78,11 @@
         .css-hack { color: blue; } /* 只有IE 8显示蓝色 */
     }
 
-* IE 9的CSS Hack
+* ###### IE 9的CSS Hack
     `\0`;      /* ie 8/9*/
     `\9\0`;    /* ie 9*/
 
-* IE 10/11的CSS Hack
+* ###### IE 10/11的CSS Hack
 
     /*ie11 css hack*/ 
     @media all and (-ms-high-contrast:none) { 
