@@ -45,10 +45,10 @@
 
 * ###### IE 6的CSS Hack
     css名称前面加上下划线`_`,只有IE 6可以识别
-    ```css-hack {
+    ``.css-hack {
         background-color: red; /* 其他浏览器上显示为红色 */
         _background-color: blue; /* 只有IE 6浏览器上显示为蓝色 */
-    }```
+    }``
 
 > 补充：IE 6支持!important，但有个bug，一个样式内重复设了属性，会忽略'!important'
 
