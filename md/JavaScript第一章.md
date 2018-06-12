@@ -4,6 +4,9 @@
 
     JavaScript 实现由三个不同的部分组成：核心（ECMAScript），文档对象模型（DOM），浏览器对象模型（BOM）
 
+    HTML 超文本标记语言
+    XHTM 可扩展超文本标记语言
+
 ### ECMAscript
     Web浏览器只是ECMAscript实现的宿主环境之一（其他：node，Adobe flash），宿主环境提供基础的实现，也提供扩展，以便语言与环境之间对接交互
     ECMAscript规定了：语法、类型、语句、关键字、保留字、操作符、对象
@@ -113,6 +116,7 @@
 
 #### FireFox的CSS Hack
     FireFox支持嵌套其专用的css语句：@-moz-document url-prefix()。
+    
     ```
     .css-hack {
         color: red; /* 其他浏览器显示红色 */
